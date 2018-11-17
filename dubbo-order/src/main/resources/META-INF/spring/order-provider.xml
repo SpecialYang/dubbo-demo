@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 添加 DUBBO SCHEMA -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--当前项目在分布式架构中唯一名称-->
+    <dubbo:application name="order-provider" owner="specialyang"/>
+
+    <!--注册中心地址-->
+    <dubbo:registry address="N/A" />
+
+    <!--当前服务所依赖的协议-->
+    <dubbo:protocol name="dubbo" port="20880" />
+
+    <dubbo:service interface="com.specialyang.dubbo.common.facade.order.IOrderService"
+                   ref="iOrderService"/>
+
+    <bean id="iOrderService" class="com.specialyang.dubbo.order.service.IOrderServiceImpl" />
+
+
+</beans>
