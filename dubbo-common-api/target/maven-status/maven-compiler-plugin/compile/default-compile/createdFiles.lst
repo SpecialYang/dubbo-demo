@@ -1,0 +1,6 @@
+com/specialyang/dubbo/common/util/user/UserValidator.class
+com/specialyang/dubbo/common/facade/user/IUserService.class
+com/specialyang/dubbo/common/exception/RequestDataNotCastException.class
+com/specialyang/dubbo/common/entity/RPCRequest.class
+com/specialyang/dubbo/common/entity/user/UserEntity.class
+com/specialyang/dubbo/common/entity/RPCResponse.class

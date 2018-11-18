@@ -11,20 +11,20 @@
     <!--激活bean类中的注解，比如required,autowired之类-->
     <context:annotation-config />
     <!--开启组件扫描，用于发现被标记为组件的类自动注册为bean-->
-    <context:component-scan base-package="com.specialyang.dubbo.order" />
+    <context:component-scan base-package="com.specialyang.dubbo.user" />
 
 
     <!--当前项目在分布式架构中唯一名称-->
-    <dubbo:application name="order-provider" owner="specialyang"/>
+    <dubbo:application name="user-provider" owner="specialyang"/>
 
     <!--注册中心地址-->
     <dubbo:registry address="zookeeper://localhost:2181?backup=localhost:2182,localhost:2183" />
 
     <!--当前服务所依赖的协议-->
-    <dubbo:protocol name="dubbo" port="20880" />
+    <dubbo:protocol name="dubbo" port="20881" />
 
     <!--可以利用spring的注解自动注册bean-->
-    <dubbo:service interface="com.specialyang.dubbo.common.facade.order.IOrderService"
-                   ref="IOrderService"/>
+    <dubbo:service interface="com.specialyang.dubbo.common.facade.user.IUserService"
+                   ref="IUserService"/>
 
 </beans>

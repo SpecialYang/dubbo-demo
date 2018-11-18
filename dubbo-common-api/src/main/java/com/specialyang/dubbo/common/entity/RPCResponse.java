@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by Fan Yang in 2018/11/17 下午3:47.
  */
-public class DoOrderResponse implements Serializable {
+public class RPCResponse implements Serializable {
 
     private static final long serialVersionUID = -7686023500499677642L;
 
@@ -41,7 +41,7 @@ public class DoOrderResponse implements Serializable {
 
     @Override
     public String toString() {
-        return "DoOrderResponse{" +
+        return "RPCResponse{" +
                 "data=" + data +
                 ", code='" + code + '\'' +
                 ", memo='" + memo + '\'' +
